@@ -117,6 +117,18 @@ final class PestPublicExtendedMethodReflection implements ExtendedMethodReflecti
         return $this->wrapped->isPure();
     }
 
+    /** @return array<string, TrinaryLogic> */
+    public function getPureUnlessCallableIsImpureParameters(): array
+    {
+        return $this->wrapped->getPureUnlessCallableIsImpureParameters();
+    }
+
+    /** @return array<string, TrinaryLogic> */
+    public function getPureUnlessParameterPassedParameters(): array
+    {
+        return $this->wrapped->getPureUnlessParameterPassedParameters();
+    }
+
     /** @return list<ReflectionAttribute> */
     public function getAttributes(): array
     {
